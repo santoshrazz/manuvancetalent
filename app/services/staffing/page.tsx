@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Users, ArrowRight, CheckCircle, Zap } from 'lucide-react';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Users, ArrowRight, CheckCircle, Zap } from "lucide-react";
 
 export default function StaffingPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-12 pb-20 bg-linear-to-br from-background via-background to-muted">
+      <section className="pt-12 pb-20 bg-linear-to-br from-background via-background to-muted overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid md:grid-cols-2 gap-12 items-center"
@@ -36,7 +36,9 @@ export default function StaffingPage() {
                 </h1>
 
                 <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                  Build flexible and scalable teams with our contractual and temporary staffing services. Perfect for seasonal peaks and project-based work.
+                  Build flexible and scalable teams with our contractual and
+                  temporary staffing services. Perfect for seasonal peaks and
+                  project-based work.
                 </p>
 
                 <motion.div
@@ -76,7 +78,7 @@ export default function StaffingPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid md:grid-cols-2 gap-12 items-center mb-20"
@@ -94,23 +96,23 @@ export default function StaffingPage() {
                 {[
                   {
                     icon: Zap,
-                    title: 'Temporary Staffing',
-                    desc: 'Quick placement of temporary staff for immediate needs.',
+                    title: "Temporary Staffing",
+                    desc: "Quick placement of temporary staff for immediate needs.",
                   },
                   {
                     icon: CheckCircle,
-                    title: 'Contract-to-Permanent',
-                    desc: 'Try before you hire with our flexible conversion options.',
+                    title: "Contract-to-Permanent",
+                    desc: "Try before you hire with our flexible conversion options.",
                   },
                   {
                     icon: Users,
-                    title: 'Seasonal Staffing',
-                    desc: 'Scale your team up or down based on seasonal demands.',
+                    title: "Seasonal Staffing",
+                    desc: "Scale your team up or down based on seasonal demands.",
                   },
                   {
                     icon: ArrowRight,
-                    title: 'Project-Based Resources',
-                    desc: 'Specialized teams for specific projects and initiatives.',
+                    title: "Project-Based Resources",
+                    desc: "Specialized teams for specific projects and initiatives.",
                   },
                 ].map((item, idx) => {
                   const Icon = item.icon;
@@ -127,8 +129,12 @@ export default function StaffingPage() {
                         <Icon className="w-6 h-6 text-accent" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground">{item.title}</h3>
-                        <p className="text-foreground/70 text-sm">{item.desc}</p>
+                        <h3 className="font-semibold text-foreground">
+                          {item.title}
+                        </h3>
+                        <p className="text-foreground/70 text-sm">
+                          {item.desc}
+                        </p>
                       </div>
                     </motion.div>
                   );
@@ -159,15 +165,17 @@ export default function StaffingPage() {
             viewport={{ once: true }}
           >
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Key Benefits</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Key Benefits
+              </h3>
               <ul className="space-y-3">
                 {[
-                  'Flexible Workforce Scaling',
-                  'Reduced Labor Costs',
-                  'No Long-term Commitments',
-                  'Quick Staff Deployment',
-                  'Risk-Free Trial Periods',
-                  'Professional Screening',
+                  "Flexible Workforce Scaling",
+                  "Reduced Labor Costs",
+                  "No Long-term Commitments",
+                  "Quick Staff Deployment",
+                  "Risk-Free Trial Periods",
+                  "Professional Screening",
                 ].map((benefit, idx) => (
                   <motion.li
                     key={idx}
@@ -185,15 +193,17 @@ export default function StaffingPage() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Our Expertise</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Our Expertise
+              </h3>
               <ul className="space-y-3">
                 {[
-                  'Administrative & Office Support',
-                  'Technical & IT Professionals',
-                  'Manufacturing & Logistics',
-                  'Healthcare & Medical Staff',
-                  'Sales & Customer Service',
-                  'Skilled Trades & Craftspeople',
+                  "Administrative & Office Support",
+                  "Technical & IT Professionals",
+                  "Manufacturing & Logistics",
+                  "Healthcare & Medical Staff",
+                  "Sales & Customer Service",
+                  "Skilled Trades & Craftspeople",
                 ].map((expertise, idx) => (
                   <motion.li
                     key={idx}
@@ -214,7 +224,7 @@ export default function StaffingPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20 bg-muted/50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -231,24 +241,24 @@ export default function StaffingPage() {
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
-                step: '1',
-                title: 'Request',
-                desc: 'Submit your staffing requirements and specifications.',
+                step: "1",
+                title: "Request",
+                desc: "Submit your staffing requirements and specifications.",
               },
               {
-                step: '2',
-                title: 'Screening',
-                desc: 'We screen and match qualified candidates.',
+                step: "2",
+                title: "Screening",
+                desc: "We screen and match qualified candidates.",
               },
               {
-                step: '3',
-                title: 'Deployment',
-                desc: 'Quick onboarding and deployment of staff.',
+                step: "3",
+                title: "Deployment",
+                desc: "Quick onboarding and deployment of staff.",
               },
               {
-                step: '4',
-                title: 'Support',
-                desc: 'Ongoing support and management throughout.',
+                step: "4",
+                title: "Support",
+                desc: "Ongoing support and management throughout.",
               },
             ].map((item, idx) => (
               <motion.div
@@ -265,7 +275,9 @@ export default function StaffingPage() {
                 >
                   {item.step}
                 </motion.div>
-                <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                <h3 className="font-semibold text-foreground mb-2">
+                  {item.title}
+                </h3>
                 <p className="text-foreground/70 text-sm">{item.desc}</p>
               </motion.div>
             ))}
@@ -274,7 +286,7 @@ export default function StaffingPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-primary text-primary-foreground overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             className="text-4xl font-bold mb-4"
@@ -288,10 +300,7 @@ export default function StaffingPage() {
           <p className="text-lg text-primary-foreground/90 mb-8">
             Contact us to discuss your staffing needs and get started.
           </p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-gray-100 transition-all"

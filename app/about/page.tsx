@@ -166,9 +166,9 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                name: "Sarah Johnson",
+                name: "Chandani Shakya",
                 role: "Founder & CEO",
-                bio: "With 20+ years in recruitment, Sarah founded Manuvance Talent Solutions to revolutionize staffing.",
+                bio: "With 20+ years in recruitment, Chandani founded Manuvance Talent Solutions to revolutionize staffing.",
                 icon: "👩‍💼",
               },
               {

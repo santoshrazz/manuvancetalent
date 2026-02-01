@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { BarChart3, ArrowRight, CheckCircle, Lock } from 'lucide-react';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { BarChart3, ArrowRight, CheckCircle, Lock } from "lucide-react";
 
 export default function PayrollPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-12 pb-20 bg-linear-to-br from-background via-background to-muted">
+      <section className="pt-12 pb-20 bg-linear-to-br from-background via-background to-muted overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid md:grid-cols-2 gap-12 items-center"
@@ -36,7 +36,9 @@ export default function PayrollPage() {
                 </h1>
 
                 <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                  Comprehensive payroll management solutions that ensure accuracy, compliance, and efficiency. Let us handle your payroll so you can focus on growth.
+                  Comprehensive payroll management solutions that ensure
+                  accuracy, compliance, and efficiency. Let us handle your
+                  payroll so you can focus on growth.
                 </p>
 
                 <motion.div
@@ -76,7 +78,7 @@ export default function PayrollPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid md:grid-cols-2 gap-12 items-center mb-20"
@@ -107,23 +109,23 @@ export default function PayrollPage() {
                 {[
                   {
                     icon: CheckCircle,
-                    title: 'Accuracy Guaranteed',
-                    desc: '100% accurate salary calculations and tax compliance.',
+                    title: "Accuracy Guaranteed",
+                    desc: "100% accurate salary calculations and tax compliance.",
                   },
                   {
                     icon: Lock,
-                    title: 'Secure & Compliant',
-                    desc: 'Data security and full compliance with all regulations.',
+                    title: "Secure & Compliant",
+                    desc: "Data security and full compliance with all regulations.",
                   },
                   {
                     icon: BarChart3,
-                    title: 'Real-time Reporting',
-                    desc: 'Detailed analytics and reports at your fingertips.',
+                    title: "Real-time Reporting",
+                    desc: "Detailed analytics and reports at your fingertips.",
                   },
                   {
                     icon: ArrowRight,
-                    title: '24/7 Support',
-                    desc: 'Dedicated support team available anytime you need help.',
+                    title: "24/7 Support",
+                    desc: "Dedicated support team available anytime you need help.",
                   },
                 ].map((item, idx) => {
                   const Icon = item.icon;
@@ -142,8 +144,12 @@ export default function PayrollPage() {
                         </div>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-foreground">{item.title}</h3>
-                        <p className="text-foreground/70 text-sm">{item.desc}</p>
+                        <h3 className="font-semibold text-foreground">
+                          {item.title}
+                        </h3>
+                        <p className="text-foreground/70 text-sm">
+                          {item.desc}
+                        </p>
                       </div>
                     </motion.div>
                   );
@@ -161,15 +167,17 @@ export default function PayrollPage() {
             viewport={{ once: true }}
           >
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Our Payroll Features</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Our Payroll Features
+              </h3>
               <ul className="space-y-3">
                 {[
-                  'Salary Processing & Management',
-                  'Tax Compliance & Filing',
-                  'Statutory Deductions',
-                  'Bonus & Incentive Management',
-                  'Leave Management System',
-                  'Multi-location Support',
+                  "Salary Processing & Management",
+                  "Tax Compliance & Filing",
+                  "Statutory Deductions",
+                  "Bonus & Incentive Management",
+                  "Leave Management System",
+                  "Multi-location Support",
                 ].map((feature, idx) => (
                   <motion.li
                     key={idx}
@@ -187,15 +195,17 @@ export default function PayrollPage() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-foreground mb-6">Additional Benefits</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Additional Benefits
+              </h3>
               <ul className="space-y-3">
                 {[
-                  'Employee Self-Service Portal',
-                  'Payroll Analytics & Reporting',
-                  'Direct Bank Transfer Setup',
-                  'Document Management',
-                  'Compliance Assistance',
-                  'Expert Consultation',
+                  "Employee Self-Service Portal",
+                  "Payroll Analytics & Reporting",
+                  "Direct Bank Transfer Setup",
+                  "Document Management",
+                  "Compliance Assistance",
+                  "Expert Consultation",
                 ].map((benefit, idx) => (
                   <motion.li
                     key={idx}
@@ -216,7 +226,7 @@ export default function PayrollPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-secondary text-white">
+      <section className="py-20 bg-secondary text-white overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             className="text-4xl font-bold mb-4"
@@ -228,12 +238,10 @@ export default function PayrollPage() {
             Simplify Your Payroll Management
           </motion.h2>
           <p className="text-lg text-white/90 mb-8">
-            Let our experts handle your payroll while you focus on what matters most.
+            Let our experts handle your payroll while you focus on what matters
+            most.
           </p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-secondary rounded-lg font-semibold hover:bg-gray-100 transition-all"

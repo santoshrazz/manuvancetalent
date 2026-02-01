@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Briefcase, ArrowRight, CheckCircle, Award } from 'lucide-react';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Briefcase, ArrowRight, CheckCircle, Award } from "lucide-react";
 
 export default function RecruitmentPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-12 pb-20 bg-linear-to-br from-background via-background to-muted">
+      <section className="pt-12 pb-20 bg-linear-to-br from-background via-background to-muted overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid md:grid-cols-2 gap-12 items-center"
@@ -36,7 +36,10 @@ export default function RecruitmentPage() {
                 </h1>
 
                 <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                  Our expert recruitment services connect you with top-tier talent across industries. We handle the entire recruitment process from sourcing to final placement, ensuring you get the best candidates.
+                  Our expert recruitment services connect you with top-tier
+                  talent across industries. We handle the entire recruitment
+                  process from sourcing to final placement, ensuring you get the
+                  best candidates.
                 </p>
 
                 <motion.div
@@ -76,7 +79,7 @@ export default function RecruitmentPage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid md:grid-cols-2 gap-12 items-center mb-20"
@@ -93,24 +96,24 @@ export default function RecruitmentPage() {
               <div className="space-y-4">
                 {[
                   {
-                    step: '1',
-                    title: 'Requirements Analysis',
-                    desc: 'We understand your specific needs and role requirements.',
+                    step: "1",
+                    title: "Requirements Analysis",
+                    desc: "We understand your specific needs and role requirements.",
                   },
                   {
-                    step: '2',
-                    title: 'Candidate Sourcing',
-                    desc: 'We search and identify qualified candidates from our network.',
+                    step: "2",
+                    title: "Candidate Sourcing",
+                    desc: "We search and identify qualified candidates from our network.",
                   },
                   {
-                    step: '3',
-                    title: 'Screening & Interview',
-                    desc: 'Rigorous screening and interview process to find the best fit.',
+                    step: "3",
+                    title: "Screening & Interview",
+                    desc: "Rigorous screening and interview process to find the best fit.",
                   },
                   {
-                    step: '4',
-                    title: 'Placement & Support',
-                    desc: 'We ensure smooth onboarding and ongoing support.',
+                    step: "4",
+                    title: "Placement & Support",
+                    desc: "We ensure smooth onboarding and ongoing support.",
                   },
                 ].map((item, idx) => (
                   <motion.div
@@ -125,7 +128,9 @@ export default function RecruitmentPage() {
                       {item.step}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground">{item.title}</h3>
+                      <h3 className="font-semibold text-foreground">
+                        {item.title}
+                      </h3>
                       <p className="text-foreground/70 text-sm">{item.desc}</p>
                     </div>
                   </motion.div>
@@ -158,18 +163,18 @@ export default function RecruitmentPage() {
             {[
               {
                 icon: Award,
-                title: 'Executive Search',
-                desc: 'Specialized recruitment for senior management positions.',
+                title: "Executive Search",
+                desc: "Specialized recruitment for senior management positions.",
               },
               {
                 icon: CheckCircle,
-                title: 'Technical Talent',
-                desc: 'Experts in finding specialized technical professionals.',
+                title: "Technical Talent",
+                desc: "Experts in finding specialized technical professionals.",
               },
               {
                 icon: Briefcase,
-                title: 'Industry Specific',
-                desc: 'Deep expertise across multiple industries and sectors.',
+                title: "Industry Specific",
+                desc: "Deep expertise across multiple industries and sectors.",
               },
             ].map((feature, idx) => {
               const Icon = feature.icon;
@@ -186,7 +191,9 @@ export default function RecruitmentPage() {
                   <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-4">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold text-foreground mb-2">{feature.title}</h3>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    {feature.title}
+                  </h3>
                   <p className="text-foreground/70 text-sm">{feature.desc}</p>
                 </motion.div>
               );
@@ -196,7 +203,7 @@ export default function RecruitmentPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-20 bg-primary text-primary-foreground overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h2
             className="text-4xl font-bold mb-4"
@@ -210,10 +217,7 @@ export default function RecruitmentPage() {
           <p className="text-lg text-primary-foreground/90 mb-8">
             Contact our recruitment specialists to discuss your hiring needs.
           </p>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-gray-100 transition-all"
