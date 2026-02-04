@@ -60,7 +60,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 9999999999",
+      value: "+91 7065589214",
       description: "Mon-Fri, 9am-6pm IST",
     },
     {
@@ -72,8 +72,8 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Address",
-      value: "123 Business Plaza",
-      description: "Noida, Uttar Pradesh, India",
+      value: "C-403, Shani Bazar Rd, Block B, Nathu Pura, Burari",
+      description: "New Delhi, Delhi - 110084",
     },
     {
       icon: Clock,

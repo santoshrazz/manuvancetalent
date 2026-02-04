@@ -60,13 +60,13 @@ export function Hero() {
           {/* Left Content */}
           <motion.div variants={itemVariants}>
             <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6 leading-tight">
-              Find Your Perfect
-              <span className="text-secondary"> Talent</span>
+              Welcome to Manuvance
+              <span className="text-secondary"> Talent Solutions</span>
             </h1>
-            <p className="text-lg text-foreground/80 mb-8 leading-relaxed">
-              Connect with top-tier professionals and build your dream team. We
-              specialize in matching exceptional talent with innovative
-              companies.
+            <p className="text-lg text-foreground/80 mb-8 leading-relaxed capitalize">
+              Providing end-to-end hiring solutions for organizations across India. We specialize in connecting
+              the right talent with the right opportunity, ensuring quality, efficiency, and long-term value
+              for our clients.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">

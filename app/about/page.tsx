@@ -43,22 +43,17 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="text-foreground/70 mb-4 leading-relaxed">
-                Manuvance Talent Solutions was founded with a simple mission: to
-                revolutionize the way companies find talent and professionals
-                find opportunities. Starting as a small boutique recruitment
-                firm, we've grown into a comprehensive staffing and HR solutions
-                provider.
+                Manuvance Talent Solutions is a Delhi-based recruitment agency offering reliable, scalable,
+                and affordable hiring solutions to companies across India
               </p>
               <p className="text-foreground/70 mb-4 leading-relaxed">
-                Our journey has been marked by consistent growth, client
-                satisfaction, and a commitment to excellence. We've successfully
-                placed thousands of professionals and served hundreds of
-                companies across multiple industries.
+                We work closely with our clients to understand their manpower requirements and deliver
+                quantity hiring with quality assurance. Our recruitment approach is designed to save time,
+                reduce hiring costs, and ensure the right cultural and skill fit for organizations
               </p>
               <p className="text-foreground/70 leading-relaxed">
-                Today, we continue to evolve, leveraging technology and
-                expertise to deliver superior staffing solutions that drive
-                business success.
+                We have experience working with corporate clients and understand the importance of timely
+                closures, compliance, and professional coordination.
               </p>
             </motion.div>
 
@@ -77,6 +72,36 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Business Credentials */}
+      <section className="py-16 bg-background">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="rounded-2xl border border-border bg-muted/40 p-10 text-center md:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-foreground mb-6">
+              Business Credentials & Compliance
+            </h2>
+
+            <div className="space-y-3 text-foreground/80 text-lg">
+              <p>✔ MSME / Udyam Registered Enterprise</p>
+              <p>✔ Udyam Registration Date: <strong>09 January 2025</strong></p>
+              <p>
+                ✔ GST Registration:{" "}
+                <span className="italic">
+                  Not applicable as per current regulations
+                </span>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+
 
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-muted/50">
@@ -163,25 +188,19 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                name: "Chandani Shakya",
+                name: "Chandni Shakya",
                 role: "Founder & CEO",
                 bio: "With 20+ years in recruitment, Chandani founded Manuvance Talent Solutions to revolutionize staffing.",
                 icon: "👩‍💼",
               },
               {
-                name: "Michael Chen",
+                name: "Abhishek Rathore",
                 role: "VP of Operations",
                 bio: "Leading our operational excellence with expertise in process optimization and scaling.",
                 icon: "👨‍💼",
-              },
-              {
-                name: "Emily Rodriguez",
-                role: "Head of Recruitment",
-                bio: "Expert in identifying top talent and building strong employer-employee relationships.",
-                icon: "👩‍💼",
               },
             ].map((member, idx) => (
               <motion.div

@@ -6,14 +6,14 @@ import { ArrowRight, Linkedin, Mail } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Chandani Shakya",
+    name: "Chandni Shakya",
     role: "Founder & CEO",
     bio: "With 20+ years in recruitment and talent management, Chandani founded Manuvance Talent Solutions to transform how companies find talent.",
     expertise: ["Recruitment Strategy", "Business Development", "Leadership"],
     icon: "👩‍💼",
   },
   {
-    name: "Michael Chen",
+    name: "Abhishek Rathore",
     role: "VP of Operations",
     bio: "Michael brings over 15 years of operational excellence expertise, ensuring seamless service delivery and client satisfaction.",
     expertise: ["Operations", "Process Optimization", "Scaling"],

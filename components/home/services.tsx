@@ -6,24 +6,49 @@ import { Briefcase, Users, BarChart3, ArrowRight } from 'lucide-react';
 
 const services = [
   {
-    title: 'Recruitment Solutions',
-    description: 'Source and place top talent across multiple industries with our expert recruitment services.',
+    title: 'Telecalling & Sales Professionals',
+    description:
+      'We provide trained telecallers and sales professionals to drive customer engagement, lead conversion, and revenue growth.',
     icon: Briefcase,
     color: 'from-primary/20 to-secondary/20',
   },
   {
-    title: 'Payroll Services',
-    description: 'Streamline your HR operations with our comprehensive payroll management solutions.',
+    title: 'Graphic Designers',
+    description:
+      'Hire creative graphic designers skilled in branding, social media creatives, marketing assets, and visual storytelling.',
     icon: BarChart3,
     color: 'from-secondary/20 to-accent/20',
   },
   {
-    title: 'Staffing Solutions',
-    description: 'Build flexible and scalable teams with our contractual and temporary staffing services.',
+    title: 'Website Designers',
+    description:
+      'Get experienced website designers proficient in modern UI/UX, responsive layouts, and conversion-focused designs.',
+    icon: Users,
+    color: 'from-accent/20 to-primary/20',
+  },
+  {
+    title: 'IT & Non-IT Professionals',
+    description:
+      'We source qualified IT and non-IT professionals across multiple domains to meet diverse business requirements.',
+    icon: Users,
+    color: 'from-primary/20 to-secondary/20',
+  },
+  {
+    title: 'Freshers & Experienced Candidates',
+    description:
+      'From entry-level freshers to experienced professionals, we help you build balanced and scalable teams.',
+    icon: Users,
+    color: 'from-secondary/20 to-accent/20',
+  },
+  {
+    title: 'Corporate & Private Sector Roles',
+    description:
+      'Specialized hiring solutions for corporate offices and private sector companies across operations, sales, and support roles.',
     icon: Users,
     color: 'from-accent/20 to-primary/20',
   },
 ];
+
 
 export function Services() {
   const containerVariants = {
@@ -61,11 +86,18 @@ export function Services() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our <span className="text-secondary">Services</span>
+            Our Core <span className="text-secondary">Hiring Domains</span>
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            Comprehensive staffing and recruitment solutions tailored to meet your business needs
+            We support startups, growing businesses, and corporate organizations with
+            reliable bulk and quality hiring solutions.
           </p>
+
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto mt-2">
+            From CV screening to interviews and final onboarding, we manage the entire
+            recruitment cycle with precision and accountability.
+          </p>
+
         </motion.div>
 
         {/* Services Grid */}
@@ -113,7 +145,7 @@ export function Services() {
                     className="flex items-center text-secondary font-semibold text-sm group-hover:gap-2 transition-all"
                     whileHover={{ x: 5 }}
                   >
-                    Learn More
+                    View Details
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </motion.div>
                 </div>
@@ -123,21 +155,33 @@ export function Services() {
         </motion.div>
 
         {/* CTA */}
+        {/* CTA */}
         <motion.div
-          className="text-center mt-16"
+          className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
+          {/* Employer CTA */}
           <Link
             href="/services"
             className="inline-flex items-center px-8 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-secondary/90 transition-all transform hover:scale-105"
           >
-            View All Services
+            Hire Manpower / Recruitment Services
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+
+          {/* Job Seeker CTA */}
+          <Link
+            href="/apply-jobs"
+            className="inline-flex items-center px-8 py-3 border border-secondary text-secondary rounded-lg font-semibold hover:bg-secondary/10 transition-all transform hover:scale-105"
+          >
+            Apply for Jobs
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </motion.div>
+
       </div>
     </section>
   );

@@ -27,18 +27,18 @@ export default function StaffingPage() {
                     <Users className="w-6 h-6 text-accent" />
                   </div>
                   <span className="text-secondary font-semibold uppercase text-sm">
-                    Staffing Solutions
+                    Opportunities for Job Seekers
                   </span>
                 </div>
 
                 <h1 className="text-5xl font-bold text-foreground mb-4">
-                  Flexible Workforce Solutions
+                  Find the Right Job, Faster
                 </h1>
 
                 <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                  Build flexible and scalable teams with our contractual and
-                  temporary staffing services. Perfect for seasonal peaks and
-                  project-based work.
+                  We help job seekers find genuine private and corporate job opportunities
+                  across India. Our team ensures proper communication, interview updates, and
+                  guidance throughout the hiring process.
                 </p>
 
                 <motion.div
@@ -49,7 +49,7 @@ export default function StaffingPage() {
                     href="/contact"
                     className="inline-flex items-center px-8 py-3 bg-accent text-primary rounded-lg font-semibold hover:bg-accent/90 transition-all"
                   >
-                    Get Started
+                    Apply Now
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </motion.div>
@@ -89,56 +89,57 @@ export default function StaffingPage() {
           >
             <div>
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                Our Staffing Solutions
+                How We Help Job Seekers
               </h2>
 
               <div className="space-y-4">
                 {[
                   {
-                    icon: Zap,
-                    title: "Temporary Staffing",
-                    desc: "Quick placement of temporary staff for immediate needs.",
-                  },
-                  {
                     icon: CheckCircle,
-                    title: "Contract-to-Permanent",
-                    desc: "Try before you hire with our flexible conversion options.",
+                    title: "Corporate & Private Jobs",
+                    desc: "We provide access to verified corporate and private sector job openings only.",
                   },
                   {
                     icon: Users,
-                    title: "Seasonal Staffing",
-                    desc: "Scale your team up or down based on seasonal demands.",
+                    title: "Freshers & Experienced",
+                    desc: "Opportunities available for both freshers and experienced candidates.",
+                  },
+                  {
+                    icon: Zap,
+                    title: "Pan India Opportunities",
+                    desc: "Job openings across multiple cities and locations in India.",
                   },
                   {
                     icon: ArrowRight,
-                    title: "Project-Based Resources",
-                    desc: "Specialized teams for specific projects and initiatives.",
+                    title: "Interview Coordination",
+                    desc: "Timely interview scheduling, updates, and follow-ups.",
                   },
-                ].map((item, idx) => {
-                  const Icon = item.icon;
-                  return (
-                    <motion.div
-                      key={idx}
-                      className="flex gap-4"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: idx * 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      <div className="shrink-0 w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-accent" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">
-                          {item.title}
-                        </h3>
-                        <p className="text-foreground/70 text-sm">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </motion.div>
-                  );
-                })}
+                ]
+                  .map((item, idx) => {
+                    const Icon = item.icon;
+                    return (
+                      <motion.div
+                        key={idx}
+                        className="flex gap-4"
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: idx * 0.1 }}
+                        viewport={{ once: true }}
+                      >
+                        <div className="shrink-0 w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-accent" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-foreground">
+                            {item.title}
+                          </h3>
+                          <p className="text-foreground/70 text-sm">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
               </div>
             </div>
 
@@ -151,7 +152,7 @@ export default function StaffingPage() {
             >
               <div className="absolute inset-0 bg-linear-to-br from-accent/20 to-primary/20" />
               <div className="absolute inset-0 flex items-center justify-center text-6xl">
-                🤝
+                🎯
               </div>
             </motion.div>
           </motion.div>
@@ -166,57 +167,59 @@ export default function StaffingPage() {
           >
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">
-                Key Benefits
+                Key Benefits for Job Seekers
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Flexible Workforce Scaling",
-                  "Reduced Labor Costs",
-                  "No Long-term Commitments",
-                  "Quick Staff Deployment",
-                  "Risk-Free Trial Periods",
-                  "Professional Screening",
-                ].map((benefit, idx) => (
-                  <motion.li
-                    key={idx}
-                    className="flex items-center gap-3"
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: idx * 0.05 }}
-                    viewport={{ once: true }}
-                  >
-                    <CheckCircle className="w-5 h-5 text-accent shrink-0" />
-                    <span className="text-foreground/80">{benefit}</span>
-                  </motion.li>
-                ))}
+                  "No charges for job seekers",
+                  "Genuine and verified job opportunities",
+                  "Transparent hiring process",
+                  "Strong follow-up till joining",
+                  "Professional communication",
+                  "Career guidance and support",
+                ]
+                  .map((benefit, idx) => (
+                    <motion.li
+                      key={idx}
+                      className="flex items-center gap-3"
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-accent shrink-0" />
+                      <span className="text-foreground/80">{benefit}</span>
+                    </motion.li>
+                  ))}
               </ul>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">
-                Our Expertise
+                What You Can Expect
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Administrative & Office Support",
-                  "Technical & IT Professionals",
-                  "Manufacturing & Logistics",
-                  "Healthcare & Medical Staff",
-                  "Sales & Customer Service",
-                  "Skilled Trades & Craftspeople",
-                ].map((expertise, idx) => (
-                  <motion.li
-                    key={idx}
-                    className="flex items-center gap-3"
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: idx * 0.05 }}
-                    viewport={{ once: true }}
-                  >
-                    <CheckCircle className="w-5 h-5 text-accent shrink-0" />
-                    <span className="text-foreground/80">{expertise}</span>
-                  </motion.li>
-                ))}
+                  "Private & corporate sector jobs only",
+                  "Clear interview communication",
+                  "Resume shortlisting support",
+                  "Interview updates & feedback",
+                  "Professional recruitment process",
+                  "Ethical & transparent hiring",
+                ]
+                  .map((expertise, idx) => (
+                    <motion.li
+                      key={idx}
+                      className="flex items-center gap-3"
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-accent shrink-0" />
+                      <span className="text-foreground/80">{expertise}</span>
+                    </motion.li>
+                  ))}
               </ul>
             </div>
           </motion.div>
@@ -234,7 +237,7 @@ export default function StaffingPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              How Our Staffing Process Works
+              Our Job Assistance Process
             </h2>
           </motion.div>
 
@@ -242,45 +245,46 @@ export default function StaffingPage() {
             {[
               {
                 step: "1",
-                title: "Request",
-                desc: "Submit your staffing requirements and specifications.",
+                title: "Profile Review",
+                desc: "We understand your profile, skills, and job preferences.",
               },
               {
                 step: "2",
-                title: "Screening",
-                desc: "We screen and match qualified candidates.",
+                title: "Job Matching",
+                desc: "We match your profile with relevant job opportunities.",
               },
               {
                 step: "3",
-                title: "Deployment",
-                desc: "Quick onboarding and deployment of staff.",
+                title: "Interview Coordination",
+                desc: "Interview scheduling and proper communication.",
               },
               {
                 step: "4",
-                title: "Support",
-                desc: "Ongoing support and management throughout.",
+                title: "Follow-up Till Joining",
+                desc: "Continuous follow-up until successful joining.",
               },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-              >
+            ]
+              .map((item, idx) => (
                 <motion.div
-                  className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent"
-                  whileHover={{ scale: 1.1 }}
+                  key={idx}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: idx * 0.1 }}
+                  viewport={{ once: true }}
                 >
-                  {item.step}
+                  <motion.div
+                    className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-accent"
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    {item.step}
+                  </motion.div>
+                  <h3 className="font-semibold text-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-foreground/70 text-sm">{item.desc}</p>
                 </motion.div>
-                <h3 className="font-semibold text-foreground mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-foreground/70 text-sm">{item.desc}</p>
-              </motion.div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -295,17 +299,18 @@ export default function StaffingPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Build Your Ideal Team Today
+            Start Your Job Search With Confidence
           </motion.h2>
           <p className="text-lg text-primary-foreground/90 mb-8">
-            Contact us to discuss your staffing needs and get started.
+            Let us help you find the right opportunity with transparency and professional
+            support.
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-gray-100 transition-all"
             >
-              Contact Us
+              Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>

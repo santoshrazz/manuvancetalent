@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Facebook, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin, } from "lucide-react";
 
 export function Footer() {
   const containerVariants = {
@@ -42,13 +42,13 @@ export function Footer() {
               Connecting exceptional talent with innovative companies worldwide.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="https://www.linkedin.com/company/chandni-shakya-enterprises/" className="hover:text-accent transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="https://www.instagram.com/manuvance_talent_solutions?igsh=MWlwZGNwdTV1NGhpZw==" className="hover:text-accent transition-colors">
+                <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a href="https://www.facebook.com/share/175hDh6CPU/" className="hover:text-accent transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
@@ -96,34 +96,26 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/services"
+                  href="/services/employers"
                   className="hover:text-accent transition-colors"
                 >
-                  Recruitment Solutions
+                  Recruitment Services for Employers
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/services/hiring-model"
                   className="hover:text-accent transition-colors"
                 >
-                  Payroll Services
+                  Flexible Hiring Model
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/job-seekers"
                   className="hover:text-accent transition-colors"
                 >
-                  Staffing Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="hover:text-accent transition-colors"
-                >
-                  HR Consulting
+                  Opportunities for Job Seekers
                 </Link>
               </li>
             </ul>
@@ -135,15 +127,15 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 shrink-0" />
-                <span>Noida Uttar Pradesh India</span>
+                <span>C-403, Shani Bazar Rd, Block B, Nathu Pura, Burari, New Delhi, Delhi - 110084</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 shrink-0" />
-                <span>+91 9999999999</span>
+                <span>+91 7065589214</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 shrink-0" />
-                <span>info@manuvance.com</span>
+                <span>hello@manuvance.com</span>
               </li>
             </ul>
           </motion.div>

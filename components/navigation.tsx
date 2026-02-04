@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const pathname = usePathname();
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -30,8 +31,8 @@ export function Navigation() {
             <Link href="/" className="flex items-center">
               <div className="text-2xl font-bold text-primary">MTS</div>
               <div className="ml-2 text-xs font-semibold text-muted-foreground">
-                <div>Manuvance</div>
-                <div>Talent</div>
+                <div>MANUVANCE</div>
+                <div>TALENT SOLUTIONS</div>
               </div>
             </Link>
           </motion.div>
@@ -43,15 +44,24 @@ export function Navigation() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            {navItems.map((item, index) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary hover:bg-muted transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors${isActive
+                    ? "text-primary bg-muted"
+                    : "text-foreground hover:text-primary hover:bg-muted"
+                    }
+      `}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+
           </motion.div>
 
           {/* CTA Button */}
@@ -92,16 +102,26 @@ export function Navigation() {
           className="md:hidden overflow-hidden"
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-primary hover:bg-muted transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors
+        ${isActive
+                      ? "bg-muted text-primary"
+                      : "text-foreground hover:text-primary hover:bg-muted"
+                    }
+      `}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+
             <Link
               href="/contact"
               className="block px-3 py-2 rounded-md text-base font-medium bg-primary text-primary-foreground hover:bg-primary/90 transition-colors mt-2"

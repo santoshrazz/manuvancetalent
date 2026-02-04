@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BarChart3, ArrowRight, CheckCircle, Lock } from "lucide-react";
 
-export default function PayrollPage() {
+export default function RecruitmentPage() {
   return (
     <>
       {/* Hero Section */}
@@ -27,18 +27,18 @@ export default function PayrollPage() {
                     <BarChart3 className="w-6 h-6 text-secondary" />
                   </div>
                   <span className="text-secondary font-semibold uppercase text-sm">
-                    Payroll Solutions
+                    For Employers / Clients
                   </span>
                 </div>
 
                 <h1 className="text-5xl font-bold text-foreground mb-4">
-                  Streamline Your Payroll
+                  Recruitment Services for Employers
                 </h1>
 
                 <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-                  Comprehensive payroll management solutions that ensure
-                  accuracy, compliance, and efficiency. Let us handle your
-                  payroll so you can focus on growth.
+                  We provide complete end-to-end recruitment services on a per-candidate hiring
+                  model. Our focus is to help organizations hire the right talent efficiently,
+                  affordably, and with complete transparency.
                 </p>
 
                 <motion.div
@@ -49,7 +49,7 @@ export default function PayrollPage() {
                     href="/contact"
                     className="inline-flex items-center px-8 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-secondary/90 transition-all"
                   >
-                    Get Started
+                    Start Hiring
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </motion.div>
@@ -102,25 +102,25 @@ export default function PayrollPage() {
 
             <div>
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                Why Choose Our Payroll Services?
+                Why Choose Our Recruitment Services?
               </h2>
 
               <div className="space-y-4">
                 {[
                   {
                     icon: CheckCircle,
-                    title: "Accuracy Guaranteed",
-                    desc: "100% accurate salary calculations and tax compliance.",
+                    title: "End-to-End Recruitment",
+                    desc: "Complete hiring support from requirement understanding to joining.",
                   },
                   {
                     icon: Lock,
-                    title: "Secure & Compliant",
-                    desc: "Data security and full compliance with all regulations.",
+                    title: "Quality & Quantity Hiring",
+                    desc: "Expertise in both bulk hiring and specialized recruitment.",
                   },
                   {
                     icon: BarChart3,
-                    title: "Real-time Reporting",
-                    desc: "Detailed analytics and reports at your fingertips.",
+                    title: "Dedicated Client Support",
+                    desc: "Single point of contact for smooth hiring coordination.",
                   },
                   {
                     icon: ArrowRight,
@@ -168,57 +168,59 @@ export default function PayrollPage() {
           >
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">
-                Our Payroll Features
+                Our Recruitment Services Include
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Salary Processing & Management",
-                  "Tax Compliance & Filing",
-                  "Statutory Deductions",
-                  "Bonus & Incentive Management",
-                  "Leave Management System",
-                  "Multi-location Support",
-                ].map((feature, idx) => (
-                  <motion.li
-                    key={idx}
-                    className="flex items-center gap-3"
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: idx * 0.05 }}
-                    viewport={{ once: true }}
-                  >
-                    <CheckCircle className="w-5 h-5 text-secondary shrink-0" />
-                    <span className="text-foreground/80">{feature}</span>
-                  </motion.li>
-                ))}
+                  "Understanding client manpower requirements",
+                  "Job posting & candidate sourcing",
+                  "CV screening & shortlisting",
+                  "Interview scheduling & coordination",
+                  "Candidate follow-up till joining",
+                  "Bulk & quantity hiring",
+                ]
+                  .map((feature, idx) => (
+                    <motion.li
+                      key={idx}
+                      className="flex items-center gap-3"
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-secondary shrink-0" />
+                      <span className="text-foreground/80">{feature}</span>
+                    </motion.li>
+                  ))}
               </ul>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">
-                Additional Benefits
+                Hiring Model & Benefits
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Employee Self-Service Portal",
-                  "Payroll Analytics & Reporting",
-                  "Direct Bank Transfer Setup",
-                  "Document Management",
-                  "Compliance Assistance",
-                  "Expert Consultation",
-                ].map((benefit, idx) => (
-                  <motion.li
-                    key={idx}
-                    className="flex items-center gap-3"
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: idx * 0.05 }}
-                    viewport={{ once: true }}
-                  >
-                    <CheckCircle className="w-5 h-5 text-secondary shrink-0" />
-                    <span className="text-foreground/80">{benefit}</span>
-                  </motion.li>
-                ))}
+                  "Per candidate hiring fee",
+                  "Special discounted packages for bulk hiring",
+                  "Affordable & transparent pricing",
+                  "One-time replacement guarantee",
+                  "Professional & ethical recruitment process",
+                  "Long-term recruitment partnership",
+                ]
+                  .map((benefit, idx) => (
+                    <motion.li
+                      key={idx}
+                      className="flex items-center gap-3"
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: idx * 0.05 }}
+                      viewport={{ once: true }}
+                    >
+                      <CheckCircle className="w-5 h-5 text-secondary shrink-0" />
+                      <span className="text-foreground/80">{benefit}</span>
+                    </motion.li>
+                  ))}
               </ul>
             </div>
           </motion.div>
@@ -235,18 +237,18 @@ export default function PayrollPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Simplify Your Payroll Management
+            Hire the Right Talent with Confidence
           </motion.h2>
           <p className="text-lg text-white/90 mb-8">
-            Let our experts handle your payroll while you focus on what matters
-            most.
+            Partner with Manuvance Talent Solutions for professional, transparent, and
+            reliable recruitment services.
           </p>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/contact"
               className="inline-flex items-center px-8 py-3 bg-white text-secondary rounded-lg font-semibold hover:bg-gray-100 transition-all"
             >
-              Get in Touch
+              Contact Us
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
