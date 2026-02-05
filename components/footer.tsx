@@ -112,7 +112,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/job-seekers"
+                  href="/services/job-seekers"
                   className="hover:text-accent transition-colors"
                 >
                   Opportunities for Job Seekers

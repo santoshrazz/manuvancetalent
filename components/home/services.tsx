@@ -141,13 +141,13 @@ export function Services() {
                     {service.description}
                   </p>
 
-                  <motion.div
+                  {/* <motion.div
                     className="flex items-center text-secondary font-semibold text-sm group-hover:gap-2 transition-all"
                     whileHover={{ x: 5 }}
                   >
                     View Details
                     <ArrowRight className="w-4 h-4 ml-2" />
-                  </motion.div>
+                  </motion.div> */}
                 </div>
               </motion.div>
             );
@@ -165,7 +165,7 @@ export function Services() {
         >
           {/* Employer CTA */}
           <Link
-            href="/services"
+            href="/contact"
             className="inline-flex items-center px-8 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-secondary/90 transition-all transform hover:scale-105"
           >
             Hire Manpower / Recruitment Services
@@ -174,7 +174,7 @@ export function Services() {
 
           {/* Job Seeker CTA */}
           <Link
-            href="/apply-jobs"
+            href="/contact"
             className="inline-flex items-center px-8 py-3 border border-secondary text-secondary rounded-lg font-semibold hover:bg-secondary/10 transition-all transform hover:scale-105"
           >
             Apply for Jobs

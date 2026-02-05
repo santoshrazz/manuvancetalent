@@ -5,6 +5,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,6 @@ export function Navigation() {
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     // { name: "Jobs", href: "/jobs" },
-    { name: "Team", href: "/team" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -29,7 +29,13 @@ export function Navigation() {
             transition={{ duration: 0.5 }}
           >
             <Link href="/" className="flex items-center">
-              <div className="text-2xl font-bold text-primary">MTS</div>
+              <Image
+                src="/logo.jpeg" // or /logo.svg
+                alt="Manuvance Talent Solutions"
+                width={48}
+                height={48}
+                className="object-contain"
+              />
               <div className="ml-2 text-xs font-semibold text-muted-foreground">
                 <div>MANUVANCE</div>
                 <div>TALENT SOLUTIONS</div>

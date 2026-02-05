@@ -2,9 +2,26 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Target, Lightbulb, Heart, ArrowRight, Award } from "lucide-react";
+import { Target, Lightbulb, Heart, Award, ArrowRight, Linkedin, Mail } from "lucide-react";
 
 export default function AboutPage() {
+  const teamMembers = [
+    {
+      name: "Chandni Shakya",
+      role: "Founder & CEO",
+      bio: "With 20+ years in recruitment and talent management, Chandani founded Manuvance Talent Solutions to transform how companies find talent.",
+      expertise: ["Recruitment Strategy", "Business Development", "Leadership"],
+      icon: "👩‍💼",
+    },
+    {
+      name: "Abhishek Rathore",
+      role: "VP of Operations",
+      bio: "Michael brings over 15 years of operational excellence expertise, ensuring seamless service delivery and client satisfaction.",
+      expertise: ["Operations", "Process Optimization", "Scaling"],
+      icon: "👨‍💼",
+    },
+
+  ];
   return (
     <>
       {/* Hero Section */}
@@ -102,7 +119,6 @@ export default function AboutPage() {
       </section>
 
 
-
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -169,8 +185,86 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Team Grid */}
       <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, idx) => (
+              <motion.div
+                key={idx}
+                className="rounded-xl overflow-hidden bg-muted border border-border hover:border-secondary/50 transition-all"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.05 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10 }}
+              >
+                <div className="p-8">
+                  {/* Avatar */}
+                  <motion.div
+                    className="text-7xl mb-6 text-center"
+                    whileHover={{ scale: 1.2, rotate: 5 }}
+                  >
+                    {member.icon}
+                  </motion.div>
+
+                  {/* Name and Role */}
+                  <h3 className="text-2xl font-bold text-foreground mb-1 text-center">
+                    {member.name}
+                  </h3>
+                  <p className="text-secondary font-semibold text-center mb-4">
+                    {member.role}
+                  </p>
+
+                  {/* Bio */}
+                  <p className="text-foreground/70 text-sm leading-relaxed mb-6 text-center">
+                    {member.bio}
+                  </p>
+
+                  {/* Expertise */}
+                  <div className="mb-6">
+                    <p className="text-xs font-semibold text-foreground/60 uppercase mb-3 text-center">
+                      Expertise
+                    </p>
+                    <div className="flex flex-wrap gap-2 justify-center">
+                      {member.expertise.map((skill, idx) => (
+                        <motion.span
+                          key={idx}
+                          className="px-3 py-1 rounded-full bg-secondary/20 text-secondary text-xs font-medium"
+                          whileHover={{ scale: 1.05 }}
+                        >
+                          {skill}
+                        </motion.span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Social Links */}
+                  <div className="flex items-center justify-center gap-3 border-t border-border pt-6">
+                    <motion.button
+                      className="p-2 rounded-lg hover:bg-secondary/10 transition-colors"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Linkedin className="w-5 h-5 text-secondary" />
+                    </motion.button>
+                    <motion.button
+                      className="p-2 rounded-lg hover:bg-secondary/10 transition-colors"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Mail className="w-5 h-5 text-secondary" />
+                    </motion.button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Culture Section */}
+      <section className="py-20 bg-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -180,50 +274,61 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Meet Our Leadership
+              Our Team Culture
             </h2>
             <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-              Our experienced team brings decades of combined expertise in
-              recruitment, HR, and business development.
+              We believe in building a workplace where innovation,
+              collaboration, and personal growth thrive.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {[
               {
-                name: "Chandni Shakya",
-                role: "Founder & CEO",
-                bio: "With 20+ years in recruitment, Chandani founded Manuvance Talent Solutions to revolutionize staffing.",
-                icon: "👩‍💼",
+                title: "Collaboration",
+                description:
+                  "We work together to achieve common goals and support each other.",
               },
               {
-                name: "Abhishek Rathore",
-                role: "VP of Operations",
-                bio: "Leading our operational excellence with expertise in process optimization and scaling.",
-                icon: "👨‍💼",
+                title: "Excellence",
+                description:
+                  "We strive for excellence in everything we do, every day.",
               },
-            ].map((member, idx) => (
+              {
+                title: "Innovation",
+                description:
+                  "We embrace new ideas and continuously improve our services.",
+              },
+              {
+                title: "Integrity",
+                description:
+                  "We conduct business with honesty and maintain the highest ethics.",
+              },
+            ].map((value, idx) => (
               <motion.div
                 key={idx}
-                className="rounded-xl overflow-hidden bg-muted border border-border hover:border-secondary/50 transition-colors"
-                initial={{ opacity: 0, y: 30 }}
+                className="text-center p-8 rounded-xl bg-background border border-border"
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
-                <div className="p-8 text-center">
-                  <div className="text-6xl mb-4">{member.icon}</div>
-                  <h3 className="text-xl font-bold text-foreground mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-secondary font-semibold text-sm mb-4">
-                    {member.role}
-                  </p>
-                  <p className="text-foreground/70 text-sm leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
+                <motion.div
+                  className="text-5xl mb-4"
+                  whileHover={{ scale: 1.2 }}
+                >
+                  {idx === 0 && "🤝"}
+                  {idx === 1 && "⭐"}
+                  {idx === 2 && "💡"}
+                  {idx === 3 && "🛡️"}
+                </motion.div>
+                <h3 className="text-lg font-bold text-foreground mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-foreground/70 text-sm">
+                  {value.description}
+                </p>
               </motion.div>
             ))}
           </div>
