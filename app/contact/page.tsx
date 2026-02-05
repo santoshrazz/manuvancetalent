@@ -66,7 +66,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@manuvance.com",
+      value: "hello@manuvance.in",
       description: "We reply within 24 hours",
     },
     {
@@ -106,7 +106,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-20">
             {contactInfo.map((info, idx) => {
