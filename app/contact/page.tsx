@@ -66,7 +66,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@manuvance.in",
+      value: "hello@manuvancetalent.in",
       description: "We reply within 24 hours",
     },
     {
