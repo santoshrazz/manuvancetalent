@@ -1,54 +1,72 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Briefcase, Users, BarChart3, ArrowRight } from 'lucide-react';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import {
+  Briefcase,
+  Users,
+  BarChart3,
+  ArrowRight,
+  StickyNote,
+  Printer,
+  Monitor,
+  CircleUser,
+} from "lucide-react";
 
 const services = [
   {
-    title: 'Telecalling & Sales Professionals',
-    description:
-      'We provide trained telecallers and sales professionals to drive customer engagement, lead conversion, and revenue growth.',
-    icon: Briefcase,
-    color: 'from-primary/20 to-secondary/20',
-  },
-  {
-    title: 'Graphic Designers',
-    description:
-      'Hire creative graphic designers skilled in branding, social media creatives, marketing assets, and visual storytelling.',
+    title: "Tech Professionals",
+    points: [
+      "Graphic Designer – 1+ year experience",
+      "Web Designer – 1+ year experience",
+    ],
     icon: BarChart3,
-    color: 'from-secondary/20 to-accent/20',
+    color: "from-secondary/20 to-accent/20",
   },
   {
-    title: 'Website Designers',
-    description:
-      'Get experienced website designers proficient in modern UI/UX, responsive layouts, and conversion-focused designs.',
-    icon: Users,
-    color: 'from-accent/20 to-primary/20',
+    title: "White Collar Professionals",
+    points: ["Telecalling Professionals", "Sales Professionals"],
+    icon: Briefcase,
+    color: "from-primary/20 to-secondary/20",
   },
   {
-    title: 'IT & Non-IT Professionals',
-    description:
-      'We source qualified IT and non-IT professionals across multiple domains to meet diverse business requirements.',
-    icon: Users,
-    color: 'from-primary/20 to-secondary/20',
+    title: "IT & Non-IT Professionals",
+    points: [
+      "Qualified IT professionals across multiple domains",
+      "Non-IT professionals for operations and support roles",
+    ],
+    icon: Monitor,
+    color: "from-accent/20 to-primary/20",
   },
   {
-    title: 'Freshers & Experienced Candidates',
-    description:
-      'From entry-level freshers to experienced professionals, we help you build balanced and scalable teams.',
-    icon: Users,
-    color: 'from-secondary/20 to-accent/20',
+    title: "Freshers & Experienced Candidates",
+    points: [
+      "Entry-level freshers for scalable team building",
+      "Experienced professionals for immediate impact roles",
+    ],
+    icon: CircleUser,
+    color: "from-secondary/20 to-accent/20",
   },
   {
-    title: 'Corporate & Private Sector Roles',
-    description:
-      'Specialized hiring solutions for corporate offices and private sector companies across operations, sales, and support roles.',
+    title: "Corporate & Private Sector Roles",
+    points: [
+      "Corporate office hiring solutions",
+      "Private sector recruitment across departments",
+    ],
     icon: Users,
-    color: 'from-accent/20 to-primary/20',
+    color: "from-primary/20 to-secondary/20",
+  },
+  {
+    title: "Back Office & Support Professionals",
+    points: [
+      "Data Entry Operators",
+      "Customer Support Executives",
+      "Office Coordinators & Admin Staff",
+    ],
+    icon: Printer,
+    color: "from-accent/20 to-secondary/20",
   },
 ];
-
 
 export function Services() {
   const containerVariants = {
@@ -89,15 +107,14 @@ export function Services() {
             Our Core <span className="text-secondary">Hiring Domains</span>
           </h2>
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            We support startups, growing businesses, and corporate organizations with
-            reliable bulk and quality hiring solutions.
+            We support startups, growing businesses, and corporate organizations
+            with reliable bulk and quality hiring solutions.
           </p>
 
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto mt-2">
-            From CV screening to interviews and final onboarding, we manage the entire
-            recruitment cycle with precision and accountability.
+            From CV screening to interviews and final onboarding, we manage the
+            entire recruitment cycle with precision and accountability.
           </p>
-
         </motion.div>
 
         {/* Services Grid */}
@@ -137,9 +154,14 @@ export function Services() {
                     {service.title}
                   </h3>
 
-                  <p className="text-foreground/70 text-sm leading-relaxed mb-6">
-                    {service.description}
-                  </p>
+                  <ul className="text-foreground/70 text-sm leading-relaxed mb-6 space-y-2">
+                    {service.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="mt-1 w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
 
                   {/* <motion.div
                     className="flex items-center text-secondary font-semibold text-sm group-hover:gap-2 transition-all"
@@ -181,7 +203,6 @@ export function Services() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </motion.div>
-
       </div>
     </section>
   );

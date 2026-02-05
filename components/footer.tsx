@@ -2,7 +2,14 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Facebook, Linkedin, Instagram, Mail, Phone, MapPin, } from "lucide-react";
+import {
+  Facebook,
+  Linkedin,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 export function Footer() {
   const containerVariants = {
@@ -42,13 +49,22 @@ export function Footer() {
               Connecting exceptional talent with innovative companies worldwide.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.linkedin.com/company/chandni-shakya-enterprises/" className="hover:text-accent transition-colors">
+              <a
+                href="https://www.linkedin.com/company/chandni-shakya-enterprises/"
+                className="hover:text-accent transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://www.instagram.com/manuvance_talent_solutions?igsh=MWlwZGNwdTV1NGhpZw==" className="hover:text-accent transition-colors">
+              <a
+                href="https://www.instagram.com/manuvance_talent_solutions?igsh=MWlwZGNwdTV1NGhpZw=="
+                className="hover:text-accent transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/share/175hDh6CPU/" className="hover:text-accent transition-colors">
+              <a
+                href="https://www.facebook.com/share/175hDh6CPU/"
+                className="hover:text-accent transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
@@ -127,7 +143,10 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-1 shrink-0" />
-                <span>C-403, Shani Bazar Rd, Block B, Nathu Pura, Burari, New Delhi, Delhi - 110084</span>
+                <span>
+                  C-403, Nathupura Main Market,B-Block, Nathupura, Burari,New
+                  Delhi, Delhi – 110084
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 shrink-0" />

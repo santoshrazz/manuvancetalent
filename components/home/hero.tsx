@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
@@ -64,9 +65,10 @@ export function Hero() {
               <span className="text-secondary"> Talent Solutions</span>
             </h1>
             <p className="text-lg text-foreground/80 mb-8 leading-relaxed capitalize">
-              Providing end-to-end hiring solutions for organizations across India. We specialize in connecting
-              the right talent with the right opportunity, ensuring quality, efficiency, and long-term value
-              for our clients.
+              Providing end-to-end hiring solutions for organizations across
+              India. We specialize in connecting the right talent with the right
+              opportunity, ensuring quality, efficiency, and long-term value for
+              our clients.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -80,19 +82,19 @@ export function Hero() {
 
             <motion.div className="flex gap-8" variants={itemVariants}>
               <div>
-                <div className="text-3xl font-bold text-secondary">500+</div>
+                <div className="text-3xl font-bold text-secondary">5+</div>
                 <div className="text-sm text-foreground/60">
                   Companies Placed
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary">10K+</div>
+                <div className="text-3xl font-bold text-secondary">7+</div>
                 <div className="text-sm text-foreground/60">
                   Successful Placements
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-secondary">50+</div>
+                <div className="text-3xl font-bold text-secondary">10+</div>
                 <div className="text-sm text-foreground/60">
                   Industries Covered
                 </div>
@@ -116,17 +118,18 @@ export function Hero() {
               }}
               transition={{ duration: 4, repeat: Infinity }}
             />
-            <div className="absolute inset-4 bg-linear-to-br from-primary/5 to-secondary/5 rounded-xl flex items-center justify-center">
-              <motion.div
-                animate={{
-                  y: [0, 20, 0],
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="text-6xl"
-              >
-                👥
-              </motion.div>
-            </div>
+            <motion.div
+              className="absolute inset-4 bg-linear-to-br from-primary/5 to-secondary/5 rounded-xl flex items-center justify-center"
+              animate={{ y: [0, -6, 0], scale: [1, 1.02, 1] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Image
+                src={"Hiring_Image.jpg"}
+                alt="Hiring Illustration"
+                fill
+                className="rounded-2xl"
+              />
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

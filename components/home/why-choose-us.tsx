@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle, Target, Users, Zap } from "lucide-react";
+import Image from "next/image";
 
 const reasons = [
   {
@@ -126,20 +127,18 @@ export function WhyChooseUs() {
               }}
               transition={{ duration: 4, repeat: Infinity }}
             />
-            <div className="absolute inset-4 bg-linear-to-br from-primary/10 to-secondary/10 rounded-xl flex flex-col items-center justify-center gap-4">
-              <motion.div
-                animate={{
-                  y: [0, 15, 0],
-                }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="text-7xl"
-              >
-                ⭐
-              </motion.div>
-              <p className="text-center text-foreground/70 font-semibold">
-                15+ Years Excellence
-              </p>
-            </div>
+            <motion.div
+              className="absolute inset-4 bg-linear-to-br from-primary/5 to-secondary/5 rounded-xl flex items-center justify-center"
+              animate={{ rotate: [0, 1.5, 0, -1.5, 0], scale: [1, 1.015, 1] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <Image
+                src={"Hiring_Image2.jpg"}
+                alt="Hiring Illustration"
+                fill
+                className="rounded-2xl"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>

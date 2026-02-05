@@ -2,25 +2,46 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Target, Lightbulb, Heart, Award, ArrowRight, Linkedin, Mail } from "lucide-react";
+import {
+  Target,
+  Lightbulb,
+  Heart,
+  Award,
+  ArrowRight,
+  Linkedin,
+  Mail,
+} from "lucide-react";
+import { link } from "fs";
+import Image from "next/image";
 
 export default function AboutPage() {
   const teamMembers = [
     {
       name: "Chandni Shakya",
-      role: "Founder & CEO",
-      bio: "With 20+ years in recruitment and talent management, Chandani founded Manuvance Talent Solutions to transform how companies find talent.",
+      role: "Founder",
+      bio: "With 3+ years in recruitment and talent management, Chandni founded Manuvance Talent Solutions to transform how companies find talent.",
       expertise: ["Recruitment Strategy", "Business Development", "Leadership"],
       icon: "👩‍💼",
+      linkedIn:
+        "https://www.linkedin.com/in/chandnishakyaenterprises?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      email: "hello@manuvancetalent.in",
+      image: "/ChandaniPng.png",
     },
     {
       name: "Abhishek Rathore",
-      role: "VP of Operations",
-      bio: "Michael brings over 15 years of operational excellence expertise, ensuring seamless service delivery and client satisfaction.",
-      expertise: ["Operations", "Process Optimization", "Scaling"],
+      role: "Co-Founder",
+      bio: "Abhishek Rathore brings over 2 years of experience in recruitment operations, and delivering high-quality hiring outcomes aligned with business goals.",
+      expertise: [
+        "Talent-Acquisition",
+        "Candidate-Screening",
+        "Interview-Process",
+      ],
       icon: "👨‍💼",
+      linkedIn:
+        "https://www.linkedin.com/in/abhishek-rathore-230736362?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      email: "hello@manuvancetalent.in",
+      image: "/Abhishek.png",
     },
-
   ];
   return (
     <>
@@ -60,17 +81,21 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="text-foreground/70 mb-4 leading-relaxed">
-                Manuvance Talent Solutions is a Delhi-based recruitment agency offering reliable, scalable,
-                and affordable hiring solutions to companies across India
+                Manuvance Talent Solutions is a Delhi-based recruitment agency
+                offering reliable, scalable, and affordable hiring solutions to
+                companies across India
               </p>
               <p className="text-foreground/70 mb-4 leading-relaxed">
-                We work closely with our clients to understand their manpower requirements and deliver
-                quantity hiring with quality assurance. Our recruitment approach is designed to save time,
-                reduce hiring costs, and ensure the right cultural and skill fit for organizations
+                We work closely with our clients to understand their manpower
+                requirements and deliver quantity hiring with quality assurance.
+                Our recruitment approach is designed to save time, reduce hiring
+                costs, and ensure the right cultural and skill fit for
+                organizations
               </p>
               <p className="text-foreground/70 leading-relaxed">
-                We have experience working with corporate clients and understand the importance of timely
-                closures, compliance, and professional coordination.
+                We have experience working with corporate clients and understand
+                the importance of timely closures, compliance, and professional
+                coordination.
               </p>
             </motion.div>
 
@@ -106,7 +131,9 @@ export default function AboutPage() {
 
             <div className="space-y-3 text-foreground/80 text-lg">
               <p>✔ MSME / Udyam Registered Enterprise</p>
-              <p>✔ Udyam Registration Date: <strong>09 January 2025</strong></p>
+              <p>
+                ✔ Udyam Registration Date: <strong>09 January 2025</strong>
+              </p>
               <p>
                 ✔ GST Registration:{" "}
                 <span className="italic">
@@ -117,7 +144,6 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-
 
       {/* Mission, Vision, Values */}
       <section className="py-20 bg-muted/50">
@@ -202,10 +228,16 @@ export default function AboutPage() {
                 <div className="p-8">
                   {/* Avatar */}
                   <motion.div
-                    className="text-7xl mb-6 text-center"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
+                    className="text-7xl mb-6 text-center flex justify-center overflow-hidden rounded-full"
+                    whileHover={{ scale: 1.2 }}
                   >
-                    {member.icon}
+                    <Image
+                      src={member.image}
+                      alt={`${member.name} Picture`}
+                      width={200}
+                      height={100}
+                      className=""
+                    />
                   </motion.div>
 
                   {/* Name and Role */}
@@ -246,14 +278,22 @@ export default function AboutPage() {
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <Linkedin className="w-5 h-5 text-secondary" />
+                      <Link
+                        href={member.linkedIn}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Linkedin className="w-5 h-5 text-secondary" />
+                      </Link>
                     </motion.button>
                     <motion.button
                       className="p-2 rounded-lg hover:bg-secondary/10 transition-colors"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <Mail className="w-5 h-5 text-secondary" />
+                      <Link href={`mailto:${member.email}`}>
+                        <Mail className="w-5 h-5 text-secondary" />
+                      </Link>
                     </motion.button>
                   </div>
                 </div>

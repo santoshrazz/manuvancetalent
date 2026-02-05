@@ -72,8 +72,8 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: "Address",
-      value: "C-403, Shani Bazar Rd, Block B, Nathu Pura, Burari",
-      description: "New Delhi, Delhi - 110084",
+      value: "C-403, Nathupura Main Market, B-Block, Nathupura, Burari",
+      description: "New Delhi, Delhi – 110084",
     },
     {
       icon: Clock,

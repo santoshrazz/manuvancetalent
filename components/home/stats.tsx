@@ -1,29 +1,29 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 
 const stats = [
   {
-    label: 'Successful Placements',
-    value: 10000,
-    suffix: '+',
+    label: "Successful Placements",
+    value: 7,
+    suffix: "+",
   },
   {
-    label: 'Partner Companies',
-    value: 500,
-    suffix: '+',
+    label: "Partner Companies",
+    value: 5,
+    suffix: "+",
   },
   {
-    label: 'Industries Served',
-    value: 50,
-    suffix: '+',
+    label: "Industries Served",
+    value: 10,
+    suffix: "+",
   },
   {
-    label: 'Years of Experience',
-    value: 15,
-    suffix: '+',
+    label: "Years of Experience",
+    value: 5,
+    suffix: "+",
   },
 ];
 
@@ -116,7 +116,7 @@ export function Statistics() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? 'visible' : 'hidden'}
+          animate={inView ? "visible" : "hidden"}
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -132,7 +132,9 @@ export function Statistics() {
                   isVisible={inView}
                 />
               </motion.div>
-              <p className="text-primary-foreground/90 font-medium">{stat.label}</p>
+              <p className="text-primary-foreground/90 font-medium">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </motion.div>
@@ -146,7 +148,8 @@ export function Statistics() {
           viewport={{ once: true }}
         >
           <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-            Join thousands of companies and candidates who have benefited from our expertise in connecting talent with opportunity.
+            Join thousands of companies and candidates who have benefited from
+            our expertise in connecting talent with opportunity.
           </p>
         </motion.div>
       </div>
