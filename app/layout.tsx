@@ -13,23 +13,23 @@ export const metadata: Metadata = {
   title: "Manuvance Talent Solutions - Staffing & Recruitment Agency",
   description:
     "Premier recruitment and staffing solutions connecting top talent with leading companies.",
-  // icons: {
-  //   icon: [
-  //     {
-  //       url: "/icon-light-32x32.png",
-  //       media: "(prefers-color-scheme: light)",
-  //     },
-  //     {
-  //       url: "/icon-dark-32x32.png",
-  //       media: "(prefers-color-scheme: dark)",
-  //     },
-  //     {
-  //       url: "/icon.svg",
-  //       type: "image/svg+xml",
-  //     },
-  //   ],
-  //   apple: "/apple-icon.png",
-  // },
+  icons: {
+    icon: [
+      {
+        url: "/favicon-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
