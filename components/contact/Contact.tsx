@@ -31,9 +31,24 @@ export default function ContactPage() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        iam: formData.type,
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        subject: formData.subject,
+        message: formData.message,
+      }),
+    });
 
     // Simulate form submission
     setTimeout(() => {
@@ -253,7 +268,7 @@ export default function ContactPage() {
                 </motion.div>
 
                 {/* Company */}
-                <motion.div
+                {formData.type === "employer" && <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.15 }}
@@ -270,7 +285,7 @@ export default function ContactPage() {
                     placeholder="Your Company"
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-secondary text-foreground placeholder-muted-foreground"
                   />
-                </motion.div>
+                </motion.div>}
 
                 {/* Subject */}
                 <motion.div
