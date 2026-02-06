@@ -67,7 +67,7 @@ export function WhyChooseUs() {
               <span className="text-secondary">Manuvance Talent </span>
             </h2>
             <p className="text-lg text-foreground/70 mb-8 leading-relaxed">
-              With over 15 years of industry experience, we've perfected the art
+              With over 3+ years of industry experience, we've perfected the art
               of connecting exceptional talent with innovative companies.
             </p>
 

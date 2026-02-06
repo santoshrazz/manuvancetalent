@@ -25,7 +25,7 @@ export default function AboutPage() {
       linkedIn:
         "https://www.linkedin.com/in/chandnishakyaenterprises?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       email: "hello@manuvancetalent.in",
-      image: "/ChandaniPng.png",
+      image: "/Chandani.jpeg",
     },
     {
       name: "Abhishek Rathore",
@@ -40,7 +40,7 @@ export default function AboutPage() {
       linkedIn:
         "https://www.linkedin.com/in/abhishek-rathore-230736362?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       email: "hello@manuvancetalent.in",
-      image: "/Abhishek.png",
+      image: "/AbhishekImage.png",
     },
   ];
   return (
@@ -59,7 +59,7 @@ export default function AboutPage() {
               <span className="text-secondary">Manuvance Talent Solutions</span>
             </h1>
             <p className="text-xl text-foreground/70 leading-relaxed">
-              With over 15 years of experience, we've established ourselves as a
+              With over 3+ years of experience, we've established ourselves as a
               trusted partner in connecting exceptional talent with innovative
               companies.
             </p>
@@ -236,7 +236,7 @@ export default function AboutPage() {
                       alt={`${member.name} Picture`}
                       width={200}
                       height={100}
-                      className=""
+                      className="rounded-full object-cover"
                     />
                   </motion.div>
 
@@ -392,7 +392,7 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              "Industry-leading expertise with 15+ years of experience",
+              "Industry-leading expertise with 3+ years of experience",
               "Personalized approach to understanding your unique needs",
               "Rigorous screening and vetting of all candidates",
               "Comprehensive payroll and HR solutions",
