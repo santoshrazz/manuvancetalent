@@ -15,37 +15,38 @@ interface Review {
 const initialReviews: Review[] = [
     {
         id: '1',
-        name: 'Sarah Johnson',
-        company: 'Tech Innovations Inc',
+        name: 'Amit Sharma',
+        company: 'TechNova Solutions Pvt Ltd',
         rating: 5,
         comment:
             'Elite Talent Solutions helped us find the perfect candidates in record time. Their professionalism and expertise are unmatched.',
     },
     {
         id: '2',
-        name: 'Michael Chen',
-        company: 'Global Finance Corp',
+        name: 'Priya Verma',
+        company: 'Global FinServe India',
         rating: 5,
         comment:
             'Outstanding service! They understood our specific hiring needs and delivered qualified candidates quickly.',
     },
     {
         id: '3',
-        name: 'Emma Rodriguez',
-        company: 'Creative Studios Ltd',
+        name: 'Rahul Mehta',
+        company: 'Creative Minds Studio',
         rating: 4,
         comment:
             'Great experience with their recruitment team. Very responsive and professional throughout the entire process.',
     },
     {
         id: '4',
-        name: 'David Thompson',
-        company: 'Enterprise Solutions',
+        name: 'Neha Iyer',
+        company: 'Enterprise Tech Solutions',
         rating: 5,
         comment:
             'Best staffing agency we have worked with. Their attention to detail and candidate quality is exceptional.',
     },
 ];
+
 
 export function Reviews() {
     const [reviews, setReviews] = useState<Review[]>(initialReviews);
