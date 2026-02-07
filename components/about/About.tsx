@@ -11,7 +11,6 @@ import {
   Linkedin,
   Mail,
 } from "lucide-react";
-import { link } from "fs";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -106,10 +105,12 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="absolute inset-0 bg-linear-to-br from-primary/20 to-secondary/20" />
-              <div className="absolute inset-0 flex items-center justify-center text-6xl">
-                📖
-              </div>
+              <Image
+                src={"our-story.jpeg"}
+                alt="Hiring Illustration"
+                fill
+                className="rounded-2xl"
+              />
             </motion.div>
           </div>
         </div>
@@ -397,8 +398,8 @@ export default function AboutPage() {
               "Rigorous screening and vetting of all candidates",
               "Comprehensive payroll and HR solutions",
               "Dedicated account management and 24/7 support",
-              "Proven track record with 10,000+ successful placements",
-              "Multi-industry expertise across 50+ sectors",
+              "Proven track record with 7+ successful placements",
+              "Multi-industry expertise across 10+ sectors",
               "Commitment to long-term partnership and growth",
             ].map((reason, idx) => (
               <motion.div

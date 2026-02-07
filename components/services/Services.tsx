@@ -9,6 +9,7 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
+import Image from "next/image";
 
 const serviceDetails = [
   {
@@ -35,6 +36,7 @@ const serviceDetails = [
     ],
     color: "from-primary/20 to-secondary/20",
     accentColor: "primary",
+    image: "services1.jpg",
   },
 
   {
@@ -60,6 +62,7 @@ const serviceDetails = [
     ],
     color: "from-secondary/20 to-accent/20",
     accentColor: "secondary",
+    image: "services3.jpg",
   },
 
   {
@@ -85,6 +88,7 @@ const serviceDetails = [
     ],
     color: "from-accent/20 to-primary/20",
     accentColor: "accent",
+    image: "services2.jpg",
   },
 ];
 
@@ -251,7 +255,7 @@ export default function ServicesPage() {
                   viewport={{ once: true }}
                 >
                   <motion.div
-                    className={`absolute inset-0 bg-linear-to-br ${service.color} rounded-2xl`}
+                    className={`absolute inset-0 bg-linear-to-br ${service.color} rounded-2xl `}
                     animate={{
                       boxShadow: [
                         "0 0 60px rgba(0, 168, 204, 0.1)",
@@ -261,19 +265,12 @@ export default function ServicesPage() {
                     }}
                     transition={{ duration: 4, repeat: Infinity }}
                   />
-                  <div className="absolute inset-4 bg-linear-to-br from-primary/5 to-secondary/5 rounded-xl flex items-center justify-center">
-                    <motion.div
-                      animate={{
-                        y: [0, 20, 0],
-                      }}
-                      transition={{ duration: 4, repeat: Infinity }}
-                      className="text-6xl"
-                    >
-                      {service.id === "recruitment" && "🎯"}
-                      {service.id === "payroll" && "💼"}
-                      {service.id === "staffing" && "👥"}
-                    </motion.div>
-                  </div>
+                  <Image
+                    src={service.image}
+                    alt="Services Images"
+                    fill
+                    className="rounded-2xl"
+                  />
                 </motion.div>
               </div>
             </div>
