@@ -135,11 +135,9 @@ export default function AboutPage() {
               <p>
                 ✔ Udyam Registration Date: <strong>09 January 2025</strong>
               </p>
+              <p>✔ GST-registered consultancy firm.</p>
               <p>
-                ✔ GST Registration:{" "}
-                <span className="italic">
-                  Not applicable as per current regulations
-                </span>
+                ✔ GST Registration Date: <strong>08 February 2026</strong>
               </p>
             </div>
           </motion.div>
